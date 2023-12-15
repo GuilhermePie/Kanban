@@ -30,15 +30,37 @@
 }
 
 .doing{
+    cursor: pointer;
     background-color: rgb(253, 236, 200);
 }
 
 .todo{
+    cursor: pointer;
     background-color: rgb(255, 226, 221);
 }
 
 .done{
+    cursor: pointer;
     background-color: rgb(219, 237, 219);
+}
+
+.edit{
+    cursor: pointer;
+    visibility: hidden;
+    width: 15px;
+    position: relative;
+    top: -21px;
+    left: 285px;
+    opacity: 0;
+    transition: 0.5s;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.example-dropzone:hover .edit{
+    opacity: 0.7;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+   
 }
 
 .stats{

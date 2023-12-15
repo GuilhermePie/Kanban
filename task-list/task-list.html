@@ -41,8 +41,9 @@
                 </div>
                 <p id="user-name"></p>
             </div>
+
             <div id="add-task">
-                <label for="task-input" class="name-task-input">Crie sua Tarefa</label>
+                <!-- <label for="task-input" class="name-task-input">Crie sua Tarefa</label> -->
                 <input type="text" id="task-input" name="task">
                 <button id="task-btn">Criar</button>
             </div>
@@ -62,17 +63,20 @@
 
             <div id="to-do" class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
                 <div id="subject">
-                    <input class="todo stats" id="list-1"></input>
+                    <input class="todo stats" id="list-1" maxlength="15" readonly></input><img id="edit1" class="edit"
+                        src="../assets/editar-texto.png" alt="">
                 </div>
 
             </div>
 
             <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                <input class="doing stats" id="list-2"></input>
+                <input class="doing stats" id="list-2" readonly></input>
+                <img id="edit2" class="edit" src="../assets/editar-texto.png" alt="">
             </div>
 
             <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                <input class="done stats" id="list-3"></input>
+                <input class="done stats" id="list-3" readonly>
+                </input><img id="edit3" class="edit" src="../assets/editar-texto.png" alt="">
             </div>
         </div>
     </div>
