@@ -1,0 +1,22 @@
+/* INFOS */
+.hr{
+    width: 90%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: rgb(201, 201, 201);
+}
+
+#dia{
+    padding-bottom: 5px;
+}
+
+#name-list{
+    font-weight: normal;
+}
+
+.box-info{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-end;
+}

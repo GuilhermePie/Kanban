@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="../assets/notas-adesivas.png">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/dropzone.css">
+    <link rel="stylesheet" href="./styles/perfil.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/infos.css">
+    <link rel="stylesheet" href="./styles/draggable.css">
+    <link rel="stylesheet" href="./mobile-style/styles.css">
+
+
+    <title>LISTA KANBAN</title>
+
+</head>
+
+<body>
+
+    <div id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="close" onclick="closeModal()"></span>
+                <h3>VOCÊ DESEJA APAGAR TODAS AS TAREFAS ?</h3>
+            </div>
+            <div class="modal-footer">
+                <button onclick="apagarTudo()" class="btn-choices btn-confirm">Confirmar</button>
+                <button onclick="closeModal()" class="btn-choices btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="grid">
+        <div class="perfil">
+            <div class="box">
+                <div id="user-img">
+                    <p id="frist-letter">G</p>
+                </div>
+                <p id="user-name"></p>
+            </div>
+            <div id="add-task">
+                <label for="task-input" class="name-task-input">Crie sua Tarefa</label>
+                <input type="text" id="task-input" name="task">
+                <button id="task-btn">Criar</button>
+            </div>
+
+            <button id="clear" onclick="showModal()">Apagar Tudo</button>
+        </div>
+
+        <div class="infos">
+            <div class="box-info">
+                <h1 id="name-list"></h1>
+                <p id="dia"></p>
+            </div>
+            <div class="hr"></div>
+        </div>
+
+        <div class="example-parent">
+
+            <div id="to-do" class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                <div id="subject">
+                    <input class="todo stats" id="list-1"></input>
+                </div>
+
+            </div>
+
+            <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                <input class="doing stats" id="list-2"></input>
+            </div>
+
+            <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                <input class="done stats" id="list-3"></input>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/draggable.js"></script>
+    <script src="./scripts/infos.js"></script>
+    <script src="./scripts/listname.js"></script>
+</body>
+
+</html>

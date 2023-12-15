@@ -1,0 +1,75 @@
+/* MODAL */
+#modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+  
+#close {
+    float: right;
+    font-size: 34px;
+    font-weight: bold;
+}
+  
+.modal-header {
+    margin-bottom: 40px;
+    display: flex;
+    padding: 2px 16px;
+   justify-content: center;
+    align-items: center;
+}
+  
+.modal-footer {
+    padding: 2px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+  
+.modal-content {
+    border-radius: 20px;
+    position: relative;
+    background-color: #fefefe;
+    margin:13% auto;
+    padding: 40px 20px 40px 20px;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+  
+.btn-choices{
+    padding:10px 20px 10px 20px;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+.btn-confirm:hover{
+    background-color: rgb(189, 189, 189);
+}
+  
+.btn-cancel:hover{
+    background-color: rgb(189, 189, 189);
+}
+  
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+  
+@keyframes animateretop {
+    from {top: 0; opacity: 1}
+    to {top: -300px; opacity: 0}
+}

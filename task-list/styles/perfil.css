@@ -1,0 +1,65 @@
+/* PERFIL */
+#user-img{
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#frist-letter{
+    font-size: 70px;
+    padding-top: 10px;
+}
+
+#user-name{
+    font-size: 20px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clear{
+    border: 0;
+    border-radius: 15px;
+    padding: 8px 12px 8px 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+#clear:hover{
+    background-color: #a7a7a7;
+}
+
+#add-task{
+    text-align: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+.name-task-input{
+    font-size: 21px;
+}
+  
+#task-input{
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+}
+  
+#task-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+    font-size: 18px;
+    height: 30px;
+}
