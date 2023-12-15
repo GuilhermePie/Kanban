@@ -11,7 +11,7 @@
 
 # Sobre o projeto
 
-https://kanban-rust-seven.vercel.app/
+[https://kanban-rust-seven.vercel.app/](https://kanban-v1-0.vercel.app/)
 
 Kanban list é uma aplicação web construída com base no modelo de organização kanban
 
