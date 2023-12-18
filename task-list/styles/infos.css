@@ -1,6 +1,6 @@
 /* INFOS */
 .hr{
-    width: 90%;
+    width: 94%;
     height: 4px;
     border-radius: 3px;
     background-color: rgb(201, 201, 201);
@@ -16,7 +16,31 @@
 
 .box-info{
     display: flex;
-    width: 90%;
+    width: 94%;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+#add-task{
+    width: 94%;
+    margin-bottom: 12px;
+    text-align: center;
+    gap: 10px;
+    display: flex;
+}
+  
+#task-input{
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+  
+#task-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+    font-size: 18px;
+    height: 28px;
 }

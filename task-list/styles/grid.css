@@ -11,8 +11,8 @@
 #grid{
   background-color: rgb(240, 240, 240);
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 100px 309px 210px;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 100px 300px 207px;
   grid-template-areas:
     "perfil infos infos"
     "perfil example-parent example-parent"
@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   grid-area: perfil;
-  background-color: #9faed6;
+  background-color: #718bd1;
   justify-content: space-around;
 }
 
@@ -39,8 +39,10 @@
 }
 
 .example-parent {
+  padding: 0px 15px 0px 15px;
   overflow: auto;
   grid-area: example-parent;
     color: black;
     display: flex;
+    justify-content: center;
 }

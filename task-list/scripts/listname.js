@@ -44,6 +44,49 @@ if(list3.contains(event.target)){
 }
 })
 
+// Colors
+
+const colorList1 = document.getElementById('color-list1')
+const colorList2 = document.getElementById('color-list2')
+const colorList3 = document.getElementById('color-list3')
+const classTodo = document.querySelector('.todo')
+const classDoing = document.querySelector('.doing')
+const classDone = document.querySelector('.done')
+
+if(localStorage.colorList1){
+    classTodo.style.backgroundColor = localStorage.colorList1
+}else{
+    localStorage.setItem('colorList1' , '#FFDDE2')
+}
+
+colorList1.addEventListener('input' , ()=>{
+    localStorage.setItem('colorList1' , colorList1.value)
+    classTodo.style.backgroundColor = colorList1.value
+})
+
+if(localStorage.colorList2){
+    classDoing.style.backgroundColor = localStorage.colorList2
+}else{
+    localStorage.setItem('colorList2' , '#FDECC8')
+}
+
+colorList2.addEventListener('input' , ()=>{
+    localStorage.setItem('colorList2' , colorList2.value)
+    classDoing.style.backgroundColor = colorList2.value
+})
+
+
+if(localStorage.colorList3){
+    classDone.style.backgroundColor = localStorage.colorList3
+}else{
+    localStorage.setItem('colorList3' , '#DBEDDB')
+}
+
+colorList3.addEventListener('input' , ()=>{
+    localStorage.setItem('colorList3' , colorList3.value)
+    classDone.style.backgroundColor = colorList3.value
+})
+
 // LISTAS
 
 if(localStorage.lista1){
