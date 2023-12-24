@@ -20,14 +20,15 @@
 }
 
 .perfil{
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 50px 20px 50px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-area: perfil;
-  background-color: #718bd1;
-  justify-content: space-around;
+  /* background-color: #718bd1; */
+  background-color: #cae2ee;
+  border-right: 3px solid #D3D1CB;
+  justify-content: space-between;
 }
 
 .infos{
@@ -36,9 +37,14 @@
   align-items: center;
   justify-content: center;
   grid-area: infos;
+  border-bottom: 3px solid #D3D1CB;
 }
 
 .example-parent {
+  background-image: url("../../assets/planos-de-fundo/arranjo-da-vista-superior-de-papel-de-carta-de-material-natural.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+
   padding: 0px 15px 0px 15px;
   overflow: auto;
   grid-area: example-parent;
