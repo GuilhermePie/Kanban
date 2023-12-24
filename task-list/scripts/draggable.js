@@ -43,6 +43,12 @@ function onDrop(event) {
     .clearData();
 }
 
+// plano de fundo alternavel
 
+const back = document.getElementById('back')
+const backgrounds = document.getElementById('backgrounds')
 
-    
+backgrounds.addEventListener('change' , ()=>{
+  back.style.backgroundImage = backgrounds.value
+})
+
