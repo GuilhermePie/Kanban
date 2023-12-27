@@ -48,6 +48,7 @@ function onDrop(event) {
 const back = document.getElementById('back')
 const backgrounds = document.getElementById('backgrounds')
 
+
 backgrounds.addEventListener('change' , ()=>{
   back.style.backgroundImage = backgrounds.value
 })

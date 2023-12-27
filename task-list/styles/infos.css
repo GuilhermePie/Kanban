@@ -11,6 +11,7 @@
 }
 
 #name-list{
+    font-size: 25px;
     font-weight: normal;
 }
 
@@ -30,7 +31,7 @@
 }
   
 #task-input{
-    border: 2px solid #D3D1CB;
+    border: 1px solid #D3D1CB;
     border-radius: 5px;
     font-size: 16px;
     padding: 5px;
@@ -40,12 +41,18 @@
     padding: 5px;
     cursor: pointer;
     border-radius: 5px;
-    border: 2px solid #D3D1CB;
+    border: 1px solid #D3D1CB;
     background-color: white;
     font-size: 18px;
 }
 
 #backgrounds{
-    border: 2px solid #D3D1CB;
+    border: 1px solid #D3D1CB;
     border-radius: 5px;
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 45px;
 }

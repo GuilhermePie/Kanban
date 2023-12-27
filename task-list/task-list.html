@@ -45,81 +45,86 @@
             <button id="clear" onclick="showModal()">Apagar Tudo</button>
         </div>
 
-        <div class="infos">
-            <div class="box-info">
-                <h1 id="name-list"></h1>
-                <p id="dia"></p>
-            </div>
-
-            <div id="add-task">
-                <input type="text" id="task-input" name="task">
-                <button id="task-btn">Criar</button>
-
-                <select name="backgrounds" id="backgrounds">
-                    <option
-                        value='url(../../assets/planos-de-fundo/arranjo-da-vista-superior-de-papel-de-carta-de-material-natural.jpg)'>
-                        Fundo 1</option>
-                    <option
-                        value='url(../../assets/planos-de-fundo/local-de-trabalho-azul-com-laptop-e-xicara-de-cafe-vista-superior-postura-plana.jpg)'>
-                        Fundo 2</option>
-                </select>
-
-            </div>
-        </div>
-
         <div class="example-parent" id="back">
-            <div class="container">
-                <div class="undefined stats">
-                    <p>Sem status</p>
-                </div>
-                <div id="to-do" class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                </div>
-            </div>
-
-            <div class="container">
-                <input class="todo stats" id="list-1" maxlength="15" readonly></input>
-
-                <div class="box-edit">
-                    <div class="box-text-hover box-size-hover">
-                        <img id="edit1" class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
-                    </div>
-                    <div class="box-color-hover box-size-hover">
-                        <input type="color" class="input-color" id="color-list1">
-                    </div>
-
+            <div class="infos" id="infos">
+                <div class="box-info">
+                    <h1 id="name-list"></h1>
+                    <p id="dia"></p>
                 </div>
 
-                <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                </div>
-            </div>
+                <div id="add-task">
+                    <input type="text" id="task-input" name="task">
+                    <button id="task-btn">Criar</button>
 
-            <div class="container">
-                <input class="doing stats" id="list-2" maxlength="15" readonly></input>
-                <div class="box-edit">
-                    <div class="box-text-hover box-size-hover">
-                        <img id="edit2" class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
-                    </div>
-                    <div class="box-color-hover box-size-hover">
-                        <input type="color" class="input-color" id="color-list2">
-                    </div>
+                    <select name="backgrounds" id="backgrounds">
+                        <option
+                            value="url(../../assets/planos-de-fundo/arranjo-da-vista-superior-de-papel-de-carta-de-material-natural.jpg)">
 
-                </div>
-                <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                            Fundo 1</option>
+                        <option
+                            value='url(../../assets/planos-de-fundo/local-de-trabalho-azul-com-laptop-e-xicara-de-cafe-vista-superior-postura-plana.jpg)'>
+                            Fundo 2</option>
+                        <option
+                            value='url(../../assets/planos-de-fundo/vista-superior-da-mesa-com-teclado-e-buque-de-rosas.jpg)'>
+                            Fundo 3</option>
+                    </select>
+
                 </div>
             </div>
-
-            <div class="container">
-                <input class="done stats" id="list-3" maxlength="15" readonly>
-                <div class="box-edit">
-                    <div class="box-text-hover box-size-hover">
-                        <img id="edit3" class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+            <div class="box-container">
+                <div class="container">
+                    <div class="undefined stats">
+                        <p>Sem status</p>
                     </div>
-                    <div class="box-color-hover box-size-hover">
-                        <input type="color" class="input-color" id="color-list3">
+                    <div id="to-do" class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
                     </div>
-
                 </div>
-                <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+
+                <div class="container">
+                    <input class="todo stats" id="list-1" maxlength="15" readonly></input>
+
+                    <div class="box-edit">
+                        <div class="box-text-hover box-size-hover">
+                            <img id="edit1" class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+                        </div>
+                        <div class="box-color-hover box-size-hover">
+                            <input type="color" class="input-color" id="color-list1">
+                        </div>
+
+                    </div>
+
+                    <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <input class="doing stats" id="list-2" maxlength="15" readonly></input>
+                    <div class="box-edit">
+                        <div class="box-text-hover box-size-hover">
+                            <img id="edit2" class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+                        </div>
+                        <div class="box-color-hover box-size-hover">
+                            <input type="color" class="input-color" id="color-list2">
+                        </div>
+
+                    </div>
+                    <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <input class="done stats" id="list-3" maxlength="15" readonly>
+                    <div class="box-edit">
+                        <div class="box-text-hover box-size-hover">
+                            <img id="edit3" class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+                        </div>
+                        <div class="box-color-hover box-size-hover">
+                            <input type="color" class="input-color" id="color-list3">
+                        </div>
+
+                    </div>
+                    <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                    </div>
                 </div>
             </div>
         </div>
