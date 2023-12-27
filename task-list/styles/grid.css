@@ -26,7 +26,6 @@
   flex-direction: column;
   align-items: center;
   grid-area: perfil;
-  background-color: #ebe8e8;
   border-right: 1px solid black;
   justify-content: space-between;
 }
@@ -43,7 +42,7 @@
 }
 
 .example-parent {
-  background-image: url("../../assets/planos-de-fundo/arranjo-da-vista-superior-de-papel-de-carta-de-material-natural.jpg");
+  background-image: url("../../assets/planos-de-fundo/mesa-bege.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
   overflow: auto;

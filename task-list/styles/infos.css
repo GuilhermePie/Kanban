@@ -28,6 +28,7 @@
     text-align: center;
     gap: 10px;
     display: flex;
+    justify-content: space-between;
 }
   
 #task-input{
@@ -43,7 +44,7 @@
     border-radius: 5px;
     border: 1px solid #D3D1CB;
     background-color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #backgrounds{
