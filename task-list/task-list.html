@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagex/png" href="../assets/notas-adesivas.png">
-    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/flex.css">
     <link rel="stylesheet" href="./styles/dropzone.css">
     <link rel="stylesheet" href="./styles/perfil.css">
     <link rel="stylesheet" href="./styles/modal.css">
@@ -33,16 +33,19 @@
         </div>
     </div>
 
-    <div id="grid">
-        <div class="perfil">
-            <div class="box">
-                <div id="user-img">
-                    <p id="frist-letter">G</p>
+    <div id="flex">
+        <div class="perfil" id="perfil">
+            <button id="btn-close"><img src="../assets/seta-esquerda.png"></button>
+            <div id="close-box" class="open-box">
+                <div class="box">
+                    <div id="user-img">
+                        <p id="frist-letter">G</p>
+                    </div>
+                    <p id="user-name"></p>
                 </div>
-                <p id="user-name"></p>
-            </div>
 
-            <button id="clear" onclick="showModal()">Apagar Tudo</button>
+                <button id="clear" onclick="showModal()">Apagar Tudo</button>
+            </div>
         </div>
 
         <div class="example-parent" id="back">
@@ -142,6 +145,7 @@
     <script src="./scripts/draggable.js"></script>
     <script src="./scripts/infos.js"></script>
     <script src="./scripts/listname.js"></script>
+    <script src="./scripts/hideProfile.js"></script>
 </body>
 
 </html>

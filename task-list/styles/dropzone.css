@@ -17,6 +17,20 @@
 
 /* DROPZONE */
 
+.example-parent {
+    background-image: url("../../assets/planos-de-fundo/mesa-bege.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: auto;
+    grid-area: example-parent;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
 .example-dropzone {
     overflow:auto;
     scroll-behavior: smooth;
