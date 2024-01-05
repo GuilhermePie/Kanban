@@ -77,11 +77,12 @@
     top: 30px;
     right: -15px;
     border: 0.5px solid #DFE1E6;
-    transition: 0.3s;
 }
-
-
 
 #btn-close:hover{
     background-color: #dadada;
+}
+
+.giro{
+    transform: rotate(180deg);
 }
