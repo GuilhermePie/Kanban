@@ -3,12 +3,32 @@
     position: relative;
     min-width: 10%;
     width: 20%;
-    padding: 30px;
+    padding: 20px 0px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     border-right: 1px solid #DFE1E6;
     transition: 0.2s;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+}
+
+#about-me{
+    padding: 30px 34px;
+    width: 100%;
+    height: 100%;
+    margin: 17px 0px;
+    border-top: 1px solid #DFE1E6;
+    border-bottom: 1px solid #DFE1E6;
+    display: flex;
+}
+
+.perfil-infos{
+    gap: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 #user-img{
@@ -32,7 +52,8 @@
 }
 
 .open-box{
-   height: 90vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,11 +68,6 @@
 
 .close-box{
     display: none;
-}
-
-.box{
-    display: flex;
-    align-items: center;
 }
 
 #clear{
@@ -69,12 +85,14 @@
 }
 
 #btn-close{
+    cursor: pointer;
+    background-color: white;
     display: flex;
     margin: 5px 0px 0px 20px;
     padding: 10px;   
     border-radius: 50%;
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: -15px;
     border: 0.5px solid #DFE1E6;
 }

@@ -4,7 +4,7 @@ document.getElementById("user-name").innerHTML = localStorage.player
 const dia = document.getElementById('dia')
 const date = new Date()
 
-dia.innerHTML = [date.getDate(), date.getMonth(), date.getFullYear()].join('/')
+dia.innerHTML = [date.getDate(), (date.getMonth()+1), date.getFullYear()].join('/')
 
 //------------------------------------------------------------------------------
 
