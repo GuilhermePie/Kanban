@@ -94,7 +94,7 @@ dropzones.forEach(zone => {
 })
 
 const insertAboveTask = (zone , mouseY) => {
- const els = zone.querySelectorAll('.item:not(is-dragging)') 
+ const els = zone.querySelectorAll('.item:not(.is-dragging)') 
 
  const closestTask = null
  const closestOffset = Number.NEGATIVE_INFINITY
