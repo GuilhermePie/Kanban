@@ -119,3 +119,12 @@ if(localStorage.lista3){
 list3.addEventListener('input', () =>{
     localStorage.lista3 = list3.value
 })
+
+// TROCA DE BACKGRUND
+
+const back = document.getElementById('back')
+const backgrounds = document.getElementById('backgrounds')
+
+backgrounds.addEventListener('change' , ()=>{
+  back.style.backgroundImage = backgrounds.value
+})

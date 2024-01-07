@@ -43,6 +43,7 @@ function newId(){
 function insertTask(item, task = true){
     taskList.push(item)
     toDo.appendChild(createTaksList(item))
+    checkItens()
     if(task){
         localStorage.setItem('listakanban', JSON.stringify(taskList))
     }
@@ -56,62 +57,40 @@ function createTaksList(item){
     div.setAttribute('draggable', 'true')
     let btnDelete = '<img src="../assets/close-svgrepo-com.svg" class="x" alt="botão de apagar" onClick="deletarItem('+item.id+')">'
     div.innerHTML = item.nome + btnDelete
-    // div.addEventListener('dragstart', (event)=>{
-    //     event
-    //         .dataTransfer
-    //         .setData('text/plain', event.target.id)
-    // })
     div.id = item.id
     return div 
 }
-
+function checkItens(){
 const itens = document.querySelectorAll('.item')
+    itens.forEach(item =>{
+        item.addEventListener('dragstart', ()=>{
+            item.classList.add('is-dragging')
+        })
+        item.addEventListener('dragend' , ()=>{
+            item.classList.remove('is-dragging')
+        })
+    })
+}
 
-itens.forEach(item =>{
-    item.addEventListener('dragstart', ()=>{
-        item.classList.add('is-dragging')
-    })
-    item.addEventListener('dragend' , ()=>{
-        item.classList.remove('is-dragging')
-    })
+const dropzones = document.querySelectorAll('.dropzone')
+const itens = document.querySelectorAll('.item')
+    itens.forEach(item =>{
+        item.addEventListener('dragstart', ()=>{
+            item.classList.add('is-dragging')
+        })
+        item.addEventListener('dragend' , ()=>{
+            item.classList.remove('is-dragging')
+        })
 })
-
-const dropzones = document.querySelectorAll('.dropzone') 
 
 dropzones.forEach(zone => {
   zone.addEventListener('dragover', (e)=>{
     e.preventDefault();
-
-    const bottomTask = insertAboveTask(zone, e.clientY)
     const curTask = document.querySelector(".is-dragging");
 
-    if (!bottomTask) {
-      zone.appendChild(curTask);
-    } else {
-      zone.insertBefore(curTask, bottomTask);
-    }
+    zone.appendChild(curTask)
   })
 })
-
-const insertAboveTask = (zone , mouseY) => {
- const els = zone.querySelectorAll('.item:not(.is-dragging)') 
-
- const closestTask = null
- const closestOffset = Number.NEGATIVE_INFINITY
-
- els.forEach((item)=>{
-    const { top } = item.getBoundingClientRect()
-    const offset = mouseY - top
-
-    if (offset < 0 && offset > closestOffset) {
-        closestOffset = offset;
-        closestTask = item;
-      }
-    });
-  
-    return closestTask;
-};
-//-----------------------------------
 
 function deletarItem(id){
     let indice = taskList.findIndex(i => i.id == id)

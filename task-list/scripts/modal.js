@@ -22,3 +22,6 @@ function apagarTudo(){
   localStorage.listakanban = ''
   location.reload()
 }
+
+
+

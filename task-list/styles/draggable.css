@@ -8,7 +8,6 @@
     font-family: 'Courier Prime', monospace;
     border: 1px solid rgba(128, 128, 128, 0.445);
     border-radius: 5px;
-    cursor: pointer;
     background: white;
     font-weight: normal;
     margin-bottom: 10px;
@@ -17,7 +16,8 @@
 }
 
 .is-dragging{
-  opacity: 1;
+  opacity: 0.3;
+  cursor: move;
 }
 
 .item:hover{
