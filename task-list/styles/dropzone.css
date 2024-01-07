@@ -31,7 +31,7 @@
     height: 100vh;
 }
 
-.example-dropzone {
+.dropzone {
     overflow:auto;
     scroll-behavior: smooth;
     width: 90%;

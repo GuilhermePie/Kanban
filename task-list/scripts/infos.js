@@ -48,20 +48,70 @@ function insertTask(item, task = true){
     }
 }
 
+// criando elemento drag
+
 function createTaksList(item){
     let div = document.createElement('div')
-    div.classList.add('example-draggable')
+    div.classList.add('item')
     div.setAttribute('draggable', 'true')
     let btnDelete = '<img src="../assets/close-svgrepo-com.svg" class="x" alt="botão de apagar" onClick="deletarItem('+item.id+')">'
     div.innerHTML = item.nome + btnDelete
-    div.addEventListener('dragstart', (event)=>{
-        event
-            .dataTransfer
-            .setData('text/plain', event.target.id)
-    })
+    // div.addEventListener('dragstart', (event)=>{
+    //     event
+    //         .dataTransfer
+    //         .setData('text/plain', event.target.id)
+    // })
     div.id = item.id
     return div 
 }
+
+const itens = document.querySelectorAll('.item')
+
+itens.forEach(item =>{
+    item.addEventListener('dragstart', ()=>{
+        item.classList.add('is-dragging')
+    })
+    item.addEventListener('dragend' , ()=>{
+        item.classList.remove('is-dragging')
+    })
+})
+
+const dropzones = document.querySelectorAll('.dropzone') 
+
+dropzones.forEach(zone => {
+  zone.addEventListener('dragover', (e)=>{
+    e.preventDefault();
+
+    const bottomTask = insertAboveTask(zone, e.clientY)
+    const curTask = document.querySelector(".is-dragging");
+
+    if (!bottomTask) {
+      zone.appendChild(curTask);
+    } else {
+      zone.insertBefore(curTask, bottomTask);
+    }
+  })
+})
+
+const insertAboveTask = (zone , mouseY) => {
+ const els = zone.querySelectorAll('.item:not(is-dragging)') 
+
+ const closestTask = null
+ const closestOffset = Number.NEGATIVE_INFINITY
+
+ els.forEach((item)=>{
+    const { top } = item.getBoundingClientRect()
+    const offset = mouseY - top
+
+    if (offset < 0 && offset > closestOffset) {
+        closestOffset = offset;
+        closestTask = item;
+      }
+    });
+  
+    return closestTask;
+};
+//-----------------------------------
 
 function deletarItem(id){
     let indice = taskList.findIndex(i => i.id == id)

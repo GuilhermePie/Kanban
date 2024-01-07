@@ -1,47 +1,24 @@
-const modal = document.getElementById("modal")
-const modalContent = document.getElementsByClassName('modal-content')[0]
-const close = document.getElementById('close')
-const audio = document.getElementById('audio')
 
-function showModal(){
-  modalContent.removeAttribute('animation-close')
-  modal.style.display = "block";
-};
 
-function closeModal(){
-  modal.style.display = "none"
-}
+// function onDragOver(event) {
+//     event.preventDefault();
+// }
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// function onDrop(event) {
+//   const id = event
+//     .dataTransfer
+//     .getData('text');
 
-function apagarTudo(){
-  localStorage.listakanban = ''
-  location.reload()
-}
+//     const draggableElement = document.getElementById(id);
 
-function onDragOver(event) {
-    event.preventDefault();
-}
+//     const dropzone = event.target;
 
-function onDrop(event) {
-  const id = event
-    .dataTransfer
-    .getData('text');
+//     dropzone.appendChild(draggableElement);
 
-    const draggableElement = document.getElementById(id);
-
-    const dropzone = event.target;
-
-    dropzone.appendChild(draggableElement);
-
-    event
-    .dataTransfer
-    .clearData();
-}
+//     event
+//     .dataTransfer
+//     .clearData();
+// }
 
 // plano de fundo alternavel
 
