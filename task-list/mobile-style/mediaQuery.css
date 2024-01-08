@@ -1,18 +1,29 @@
 @media screen and (max-width: 768px){
     .infos{
+        position: fixed;
+        z-index: 1;
         overflow: hidden;
-        padding-bottom: 12px;
+        padding: 12px 0px 11px 0px;
         align-items: unset;
         justify-content: unset;
     }
 
+    #modal{
+        z-index: 3;
+    }
+
+    .modal-content{
+        width: 70%;
+        margin: 84% auto;
+    }
+
     .box-info{
-        padding-left: 20px;
+        margin-left: 20px;
         width: unset;
     }
 
     #dia{
-        display: none;
+        margin-right: 27px;
     }
 
     .close-perfil{
@@ -24,9 +35,11 @@
         padding: 7px;
         right: -16px;
         top: 24px;
+        z-index: 2;
     }
 
     .box-container{
+        margin-top: 100px;
         height: 100%;
         padding-bottom: 0px;
     }
@@ -60,7 +73,7 @@
 
     #add-task{
         overflow: hidden;
-        height: 40px;
+        height: 36px;
     }
 }
 
