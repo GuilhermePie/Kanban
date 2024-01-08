@@ -1,0 +1,105 @@
+@media screen and (max-width: 768px){
+    .infos{
+        position: fixed;
+        z-index: 1;
+        overflow: hidden;
+        padding: 12px 0px 11px 0px;
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    #modal{
+        z-index: 3;
+    }
+
+    .modal-content{
+        width: 70%;
+        margin: 84% auto;
+    }
+
+    .box-info{
+        margin-left: 20px;
+        width: unset;
+    }
+
+    #dia{
+        margin-right: 27px;
+    }
+
+    .close-perfil{
+        width: 4%;
+        min-width: 4%;
+    }
+
+    #btn-close{
+        padding: 7px;
+        right: -16px;
+        top: 24px;
+        z-index: 2;
+    }
+
+    .box-container{
+        margin-top: 100px;
+        height: 100%;
+        padding-bottom: 0px;
+    }
+
+    .dropzone{
+        overflow:unset;
+    }
+
+    .container{
+        height: 400px;
+    }
+
+    #name-list {
+        font-size: 20px;
+    }
+
+    #task-input{
+        margin-left: 19px;
+        width: 150px;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    #task-btn{
+        font-size: 15px;
+    }
+
+    #backgrounds{
+        height: 30px;
+    }
+
+    #add-task{
+        overflow: hidden;
+        height: 36px;
+    }
+}
+
+@media screen and (min-height: 630px){
+    .box-container{
+        height: 100%;
+        padding-bottom: 0px;
+    }
+
+    .dropzone{
+        overflow:unset;
+    }
+
+    .container{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    #name-list {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .box-container{
+       justify-content: center;
+    }
+}

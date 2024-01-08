@@ -1,19 +1,7 @@
 const button = document.getElementById('btn')
 const nome = document.getElementById('nome')
 const form = document.getElementById('form')
-const fem = document.getElementById('feminino')
-const masc = document.getElementById('masculino')
 const nameList = document.getElementById('name-list')
-const audio = document.getElementById('audio')
-
-// const validateInput = ({ target }) => {
-//     if (target.value.length > 2) {
-//       button.removeAttribute('disabled')
-//     } else {
-//       button.setAttribute('disabled', '')
-//     }
-//   }
-  
 
 const btnClick = event => {
     event.preventDefault()
@@ -25,3 +13,11 @@ const btnClick = event => {
 }
 
 form.addEventListener("submit" , btnClick)
+
+if(localStorage.player){
+    nome.value = localStorage.player
+}
+
+if(localStorage.nameList){
+    nameList.value = localStorage.nameList
+}

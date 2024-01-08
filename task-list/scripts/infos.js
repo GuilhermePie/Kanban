@@ -4,7 +4,7 @@ document.getElementById("user-name").innerHTML = localStorage.player
 const dia = document.getElementById('dia')
 const date = new Date()
 
-dia.innerHTML = [date.getDate(), date.getMonth(), date.getFullYear()].join('/')
+dia.innerHTML = [date.getDate(), (date.getMonth()+1), date.getFullYear()].join('/')
 
 //------------------------------------------------------------------------------
 
@@ -43,25 +43,54 @@ function newId(){
 function insertTask(item, task = true){
     taskList.push(item)
     toDo.appendChild(createTaksList(item))
+    checkItens()
     if(task){
         localStorage.setItem('listakanban', JSON.stringify(taskList))
     }
 }
 
+// criando elemento drag
+
 function createTaksList(item){
     let div = document.createElement('div')
-    div.classList.add('example-draggable')
+    div.classList.add('item')
     div.setAttribute('draggable', 'true')
-    let btnDelete = '<img src="../assets/close-svgrepo-com.svg" class="x" alt="botão de apagar" onClick="deletarItem('+item.id+')">'
+    let btnDelete = '<img src="../assets/trash.png" class="trash" alt="botão de apagar" onClick="deletarItem('+item.id+')">'
     div.innerHTML = item.nome + btnDelete
-    div.addEventListener('dragstart', (event)=>{
-        event
-            .dataTransfer
-            .setData('text/plain', event.target.id)
-    })
     div.id = item.id
     return div 
 }
+function checkItens(){
+const itens = document.querySelectorAll('.item')
+    itens.forEach(item =>{
+        item.addEventListener('dragstart', ()=>{
+            item.classList.add('is-dragging')
+        })
+        item.addEventListener('dragend' , ()=>{
+            item.classList.remove('is-dragging')
+        })
+    })
+}
+
+const dropzones = document.querySelectorAll('.dropzone')
+const itens = document.querySelectorAll('.item')
+    itens.forEach(item =>{
+        item.addEventListener('dragstart', ()=>{
+            item.classList.add('is-dragging')
+        })
+        item.addEventListener('dragend' , ()=>{
+            item.classList.remove('is-dragging')
+        })
+})
+
+dropzones.forEach(zone => {
+  zone.addEventListener('dragover', (e)=>{
+    e.preventDefault();
+    const curTask = document.querySelector(".is-dragging");
+
+    zone.appendChild(curTask)
+  })
+})
 
 function deletarItem(id){
     let indice = taskList.findIndex(i => i.id == id)

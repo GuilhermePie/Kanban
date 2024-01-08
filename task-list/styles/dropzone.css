@@ -16,39 +16,135 @@
 }
 
 /* DROPZONE */
-  
-.example-dropzone {
+
+.example-parent {
+    background-image: url("../../assets/planos-de-fundo/mesa-bege.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: auto;
+    grid-area: example-parent;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.dropzone {
     overflow:auto;
     scroll-behavior: smooth;
-    width: 33%;
-    border-radius: 10px ;
+    width: 90%;
     background-color: white;
     font-family: 'Courier Prime', monospace;
     flex-grow: 1;
-    margin: 10px;
-    padding: 12px;
+    padding: 0px 12px 12px 12px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border:1px solid var(--border-gray) ;
+    border-top: 0px;
+
+    -webkit-box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.27);
+    box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.27);
 }
 
-.doing{
-    background-color: rgb(253, 236, 200);
+.container{
+    position: relative;
+    min-width: 250px;
+    width: 270px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.todo{
-    background-color: rgb(255, 226, 221);
+.undefined{
+    background-color:#dbdbda;
 }
 
-.done{
-    background-color: rgb(219, 237, 219);
+.box-edit{
+    display: flex;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+    top: 47px;
+    right: 22px;
+    border-radius: 5px;
+    border: 1px solid var(--border-gray);
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    -webkit-box-shadow: 0px 3px 12px -5px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px 3px 12px -5px rgba(0,0,0,0.62);
+    box-shadow: 0px 3px 12px -5px rgba(0,0,0,0.62);
+}
+
+.container:hover .box-edit{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+   
+}
+
+.input-color{
+    cursor: pointer;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    right: 8px;
+}
+
+.box-size-hover{
+    width: 36px;
+    height: 28px;
+}
+
+.box-text-hover{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: white;
+}
+
+.box-color-hover{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    border-left: 1px solid var(--border-gray);
+}
+
+.box-text-hover:hover{
+    background-color: #EDECE9;
+}
+
+.box-color-hover:hover{
+    background-color: #EDECE9;
+}
+
+.text-edit{
+    z-index: 3;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    top: 7px;
+    right: 46px;
+    position: absolute;
+
 }
 
 .stats{
-    border: 0;
-    width: 100%;
-    text-align: center;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 90%;
+    min-height: 43px;
     display: flex;
-    justify-content: center;
-    border-radius: 3px;
     font-size: 22px;
-    padding-top: 3px;
+    padding: 5px 5px 1px 15px;
     align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border:1px solid var(--border-gray) ;
+    border-bottom: 0px;
 }

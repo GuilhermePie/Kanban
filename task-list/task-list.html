@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagex/png" href="../assets/notas-adesivas.png">
-    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/Global.css">
     <link rel="stylesheet" href="./styles/dropzone.css">
     <link rel="stylesheet" href="./styles/perfil.css">
     <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/infos.css">
     <link rel="stylesheet" href="./styles/draggable.css">
-    <link rel="stylesheet" href="./mobile-style/styles.css">
+    <link rel="stylesheet" href="./mobile-style/mediaQuery.css">
 
 
     <title>LISTA KANBAN</title>
@@ -33,52 +33,130 @@
         </div>
     </div>
 
-    <div id="grid">
-        <div class="perfil">
-            <div class="box">
-                <div id="user-img">
-                    <p id="frist-letter">G</p>
+    <div id="flex">
+        <div class="perfil" id="perfil">
+            <button id="btn-close"><img src="../assets/seta-esquerda.png" id="seta-img" class=""></button>
+            <div id="close-box" class="open-box">
+                <div class="box">
+                    <div id="user-img">
+                        <p id="frist-letter">G</p>
+                    </div>
+                    <p id="user-name"></p>
                 </div>
-                <p id="user-name"></p>
+                <div id="about-me">
+                    <!-- <ul class="perfil-infos">
+                        <li>infos pessoais</li>
+                        <li>infos pessoais</li>
+                        <li>infos pessoais</li>
+                        <li>infos pessoais</li>
+                    </ul> -->
+                </div>
+                <div>
+                    <button id="clear" onclick="showModal()">Apagar Tudo</button>
+                </div>
             </div>
-            <div id="add-task">
-                <label for="task-input" class="name-task-input">Crie sua Tarefa</label>
-                <input type="text" id="task-input" name="task">
-                <button id="task-btn">Criar</button>
-            </div>
-
-            <button id="clear" onclick="showModal()">Apagar Tudo</button>
         </div>
 
-        <div class="infos">
-            <div class="box-info">
-                <h1 id="name-list"></h1>
-                <p id="dia"></p>
-            </div>
-            <div class="hr"></div>
-        </div>
-
-        <div class="example-parent">
-
-            <div id="to-do" class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                <div id="subject">
-                    <input class="todo stats" id="list-1"></input>
+        <div class="example-parent" id="back">
+            <div class="infos" id="infos">
+                <div class="box-info">
+                    <h1 id="name-list"></h1>
+                    <p id="dia"></p>
                 </div>
 
+                <div id="add-task">
+                    <div>
+                        <input type="text" id="task-input" name="task">
+                        <button id="task-btn">Criar</button>
+                    </div>
+                    <select name="backgrounds" id="backgrounds">
+                        <option value="url(../../assets/planos-de-fundo/mesa-bege.jpg)">
+                            Fundo 1</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-azul-claro.jpg)'>
+                            Fundo 2</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-rosa.jpg)'>
+                            Fundo 3</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-amarela.jpg)'>
+                            Fundo 4</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-azul-turquesa.jpg)'>
+                            Fundo 5</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-branca.jpg)'>
+                            Fundo 6</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-preta.jpg)'>
+                            Fundo 7</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-marrom.jpg)'>
+                            Fundo 8</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-lilas.jpg)'>
+                            Fundo 9</option>
+                        <option value='url(../../assets/planos-de-fundo/mesa-verde.jpg)'>
+                            Fundo 10</option>
+                    </select>
+                </div>
             </div>
+            <div class="box-container">
+                <div class="container">
+                    <div class="undefined stats">
+                        <p>Sem status</p>
+                    </div>
+                    <div id="to-do" class="dropzone">
+                    </div>
+                </div>
 
-            <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                <input class="doing stats" id="list-2"></input>
-            </div>
+                <div class="container">
+                    <input class="todo stats" id="list-1" maxlength="15" readonly></input>
 
-            <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-                <input class="done stats" id="list-3"></input>
+                    <div class="box-edit">
+                        <div id="edit1" class="box-text-hover box-size-hover">
+                            <img class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+                        </div>
+                        <div class="box-color-hover box-size-hover">
+                            <input type="color" class="input-color" id="color-list1">
+                        </div>
+
+                    </div>
+
+                    <div class="dropzone">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <input class="doing stats" id="list-2" maxlength="15" readonly></input>
+                    <div class="box-edit">
+                        <div id="edit2" class="box-text-hover box-size-hover">
+                            <img class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+                        </div>
+                        <div class="box-color-hover box-size-hover">
+                            <input type="color" class="input-color" id="color-list2">
+                        </div>
+
+                    </div>
+                    <div class="dropzone">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <input class="done stats" id="list-3" maxlength="15" readonly>
+                    <div class="box-edit">
+                        <div id="edit3" class="box-text-hover box-size-hover">
+                            <img class="text-edit" src="../assets/editar-texto.png" alt="botão de edição">
+                        </div>
+                        <div class="box-color-hover box-size-hover">
+                            <input type="color" class="input-color" id="color-list3">
+                        </div>
+
+                    </div>
+                    <div class="dropzone">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./scripts/draggable.js"></script>
     <script src="./scripts/infos.js"></script>
-    <script src="./scripts/listname.js"></script>
+    <script src="./scripts/listEdit.js"></script>
+    <script src="./scripts/hideProfile.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <script src="../node_modules/drag-drop-touch/DragDropTouch.js"></script>
+
 </body>
 
 </html>
