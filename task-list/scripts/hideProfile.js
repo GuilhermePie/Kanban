@@ -4,7 +4,7 @@ const closeBox = document.getElementById('close-box')
 const setaImg = document.getElementById('seta-img')
 
 btnClose.addEventListener('click' , ()=>{
-    perfil.classList.toggle('close-perfil')
-    closeBox.classList.toggle('close-box')
+    perfil.classList.toggle('perfil')
+    closeBox.classList.toggle('open-box')
     setaImg.classList.toggle('giro')
 })
