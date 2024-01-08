@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    grid-area: infos;
+    
 }
 
 #dia{
@@ -37,7 +37,7 @@
 }
   
 #task-input{
-    border: 1px solid #D3D1CB;
+    border: 1px solid var(--border-gray);
     border-radius: 5px;
     font-size: 16px;
     padding: 5px;
@@ -47,7 +47,7 @@
     padding: 5px;
     cursor: pointer;
     border-radius: 5px;
-    border: 1px solid #D3D1CB;
+    border: 1px solid var(--border-gray);
     background-color: white;
     font-size: 16px;
 }
@@ -58,7 +58,7 @@
 
 #backgrounds{
     cursor: pointer;
-    border: 1px solid #D3D1CB;
+    border: 1px solid var(--border-gray);
     border-radius: 5px;
     padding-left: 5px;
 }

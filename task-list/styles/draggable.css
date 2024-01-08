@@ -13,17 +13,18 @@
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 10px;
+    cursor: grab;
 }
 
 .is-dragging{
   opacity: 0.3;
-  cursor: move;
 }
 
 .item:hover{
     background-color: rgba(0, 0, 0, 0.068);
 }
 
-.x{
-  padding-left: 20px;
+.trash{
+  cursor: pointer;
+  opacity: 0.6;
 }

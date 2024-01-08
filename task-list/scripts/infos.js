@@ -55,7 +55,7 @@ function createTaksList(item){
     let div = document.createElement('div')
     div.classList.add('item')
     div.setAttribute('draggable', 'true')
-    let btnDelete = '<img src="../assets/close-svgrepo-com.svg" class="x" alt="botão de apagar" onClick="deletarItem('+item.id+')">'
+    let btnDelete = '<img src="../assets/trash.png" class="trash" alt="botão de apagar" onClick="deletarItem('+item.id+')">'
     div.innerHTML = item.nome + btnDelete
     div.id = item.id
     return div 
