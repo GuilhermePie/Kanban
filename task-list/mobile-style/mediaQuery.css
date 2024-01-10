@@ -1,5 +1,6 @@
 @media screen and (max-width: 768px){
     .infos{
+        width: 100vw;
         position: fixed;
         z-index: 1;
         overflow: hidden;
@@ -13,7 +14,7 @@
     }
 
     .modal-content{
-        width: 70%;
+        width: 80%;
         margin: 84% auto;
     }
 
@@ -64,6 +65,7 @@
     }
 
     #task-btn{
+        padding: 6px;
         font-size: 15px;
     }
 
