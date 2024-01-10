@@ -1,4 +1,4 @@
-# Kanban v1.0
+# Kanban v2
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/neliocursos/exemplo-readme/blob/main/LICENSE) 
 
 > Status: developing ⚠️
@@ -15,13 +15,7 @@
 
 Kanban list é uma aplicação web construída com base no modelo de organização kanban
 
-A aplicação consiste em uma lista de tarefas com elementos arrastáveis, você poderá soltar os elementos em qualquer uma das três zonas, apagalos individualmente ou se preferir também poderá apagar todos de uma vez.
-
-## Layout web
-
-![Web 1](https://github.com/GuilhermePie/Kanban/blob/5f5cf6814881d10141e53e12b416680f3f5ce0ec/assets/processo/web1.1.png)
-
-![Web 2](https://github.com/GuilhermePie/Kanban/blob/5f5cf6814881d10141e53e12b416680f3f5ce0ec/assets/processo/web2.png)
+A aplicação consiste em uma lista de tarefas com elementos arrastáveis, você poderá soltar os elementos em qualquer uma das quatro zonas, apagalos individualmente ou se preferir, também poderá apagar todos de uma vez, entre outras funcionalidades.
 
 # Autor
 
