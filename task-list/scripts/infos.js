@@ -31,8 +31,6 @@ function recoverList(){
         for(const item of items){
             insertTask(item, false)
         }
-       
-
     }
 }
 
